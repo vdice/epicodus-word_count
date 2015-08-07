@@ -9,4 +9,4 @@ rvm:
 branches:
   only:
     - travis
-script: bundle rspec
+script: rspec
