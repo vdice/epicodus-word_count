@@ -1,4 +1,4 @@
-# _Word Count_
+# Word Count
 
 ##### _Returns the occurence count of a word in a given string, August 7, 2015_
 
@@ -8,10 +8,13 @@
 
 _Users can type in text as well as the word that they would like the number of occurences for.  They are then returned said number of occurences._
 
+_This app is live! It has been deployed via Heroku and can be seen  [here](https://epicodus-word-count.herokuapp.com/)._
+
 ## Setup
 
 * _Clone this repository_
 * _Run `bundle`_
+* _Run `rspec` to verify the unit and integration tests pass_
 * _Run `ruby app.rb` to serve the web application locally_
 * _Have fun!_
 
