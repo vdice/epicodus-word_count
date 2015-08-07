@@ -2,7 +2,7 @@
 
 ##### _Returns the occurence count of a word in a given string, August 7, 2015_
 
-#### By _**Vaughn Dice**_
+#### By **_Vaughn Dice_**
 
 ## Description
 

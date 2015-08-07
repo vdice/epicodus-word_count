@@ -8,7 +8,7 @@ describe('String#word_count') do
       ' where\'s the peck of pickled peppers Peter Piper picked?'
   end
 
-  it('accepts user input') do
+  it('accepts user input and returns 0 if key is empty') do
     expect('user input'.word_count('')).to(eq(0))
   end
 
