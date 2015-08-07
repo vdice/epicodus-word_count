@@ -1,4 +1,4 @@
-# Word Count
+# Word Count ![build_status](https://travis-ci.org/vdice/epicodus-word_count.svg?branch=travis)
 
 ##### _Returns the occurence count of a word in a given string, August 7, 2015_
 
