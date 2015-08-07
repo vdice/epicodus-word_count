@@ -1,5 +1,20 @@
 language: ruby
 branches:
   only:
-    - travis
+  - travis
 script: bundle exec rspec
+
+# Heroku deploy
+before_deploy: "echo 'Deploying to Heroku...''"
+deploy:
+  provider: heroku
+  api_key:
+    secure: g7KVpr1IKDCmUZ6wHQHP1TfPnbT2uRpFjsFdsdccrIQE2iaQPBaMwhJ9q6/ERwx4YmJeLZDjG1lBmBXDNDH/1hhcdvrinbSqwn4A312S5zCdd4Dxub8Uo22N8PeF9dohnlW2v2kyRDNnuwDopPg9eCo8jXm2TFpHosWZliNYiaiRgM2NryjvwB05MxE6t/fEbvzM3ekarLY8+9j1ggJhMlud+CJpodEF+zox1b5h557neRagnClr7Aqxke1pqglgpZTUkeIotupkMoOnK8+yc3TNcMlxv7sHHgFPSTBRtF1qLEEVqEskKhuH01D6PlcbpQ4qLi9ATzq/nNTXCqc+FQhOWtiKOOv4T0MzqPmmgD2M8olD/hm21GQu6DqzCuDM0xdo1mYGEi+xZKWePV/CKzzhq7h+Srb7UXjsPzandKPK0k/W9/rCsWPyINHZ0TPIp3Bx11B/mM4eJopcovAVpN90poLslgjs8LXl++6sXytLTUAyVvOyo89KfW43iiqteR7dI77nTI5klrcLDq4YkPN0becidiPwRZ4vTMFcVq7W17oOYevl6pqB8bhJw9OHm9T5mlq79WdgPr69EgChuKgg3owXLzyJEk6qtU2vOCuGMn6pkBAM7Ax0QQYfvVlrWPVaJgk2bVbCcmPF8Lkwa8QuAsaVEgmp0BadxhHrnZE=
+  app: epicodus-word-count
+  on:
+    repo: vdice/epicodus-word_count
+    branch: travis
+after_deploy:
+  - "echo 'Deployment to Heroku successful!'"
+  - "echo 'Running tests against deployed app...'"
+  - "bundle exec rspec"
