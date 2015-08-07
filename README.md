@@ -1,12 +1,12 @@
 # Word Count ![build_status](https://travis-ci.org/vdice/epicodus-word_count.svg?branch=travis)
 
-##### _Returns the occurence count of a word in a given string, August 7, 2015_
+##### _Returns the occurrence count of a word in a given string, August 7, 2015_
 
 #### By **_Vaughn Dice_**
 
 ## Description
 
-_Users can type in text as well as the word that they would like the number of occurences for.  They are then returned said number of occurences._
+_Users can type in text as well as the word that they would like the number of occurrences for.  They are then returned said number of occurrences._
 
 _**This app is live!** It has been deployed via Heroku and can be seen  [**here**](https://epicodus-word-count.herokuapp.com/)._
 
