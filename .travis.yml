@@ -5,7 +5,7 @@ branches:
 script: bundle exec rspec
 
 # Heroku deploy
-before_deploy: "echo 'Deploying to Heroku...''"
+before_deploy: "echo 'Deploying to Heroku...'"
 deploy:
   provider: heroku
   api_key:
