@@ -1,7 +1,7 @@
 language: ruby
 branches:
   only:
-  - travis
+    - travis
 script: bundle exec rspec
 
 # Heroku deploy
