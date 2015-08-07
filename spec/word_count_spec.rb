@@ -27,8 +27,8 @@ describe('String#word_count') do
     expect(SPECIAL_CHAR_STRING.word_count('@')).to(eq(2))
   end
 
-  PETER_PIPER_STRING = 'If Peter Piper picked a peck of pickled peppers,'.concat(
-    ' where\'s the peck of pickled peppers Peter Piper picked?')
+  PETER_PIPER_STRING = 'If Peter Piper picked a peck of pickled peppers,' +
+    ' where\'s the peck of pickled peppers Peter Piper picked?'
   it('accepts the \'Peter Piper...\' example string and returns correct count') do
     expect(PETER_PIPER_STRING.word_count('peck')).to(eq(2))
   end
