@@ -22,7 +22,14 @@ describe('String#word_count') do
     expect('11111'.word_count('1')).to(eq(5))
   end
 
-  it('accepts the special character string \'*!#@#%@))))))\' and key \'@\' and returns 2') do
-    expect('*!#@#%@))))))'.word_count('@')).to(eq(2))
+  SPECIAL_CHAR_STRING = '\'\'\'_+?">:}{}"*!#@#%@))))))'
+  it("accepts the special character string #{SPECIAL_CHAR_STRING} and key '@' and returns 2") do
+    expect(SPECIAL_CHAR_STRING.word_count('@')).to(eq(2))
+  end
+
+  PETER_PIPER_STRING = 'If Peter Piper picked a peck of pickled peppers,'.concat(
+    ' where\'s the peck of pickled peppers Peter Piper picked?')
+  it('accepts the \'Peter Piper...\' example string and returns correct count') do
+    expect(PETER_PIPER_STRING.word_count('peck')).to(eq(2))
   end
 end
