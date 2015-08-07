@@ -10,7 +10,11 @@ end
 get('/result') do
   @input = params.fetch('input')
   @key = params.fetch('key')
-  @result = @input.word_count(@key)
 
-  erb(:result)
+  if @input.empty?
+    erb(:resubmit)
+  else
+    @result = @input.word_count(@key)
+    erb(:result)
+  end
 end

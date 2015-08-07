@@ -17,13 +17,34 @@ _**Now featuring CI!** A Travis CI build/test cycle is triggered anytime code is
 
 * _Clone this repository_
 * _Run `bundle`_
-* _Run `rspec` to verify the unit and integration tests pass_
-* _Run `ruby app.rb` to serve the web application locally_
-* _Have fun!_
+
+## Host the application locally:
+```
+ruby app.rb
+```
+## Run unit and integ tests:
+```
+rspec
+```
+## Run End-To-End tests:
+
+_You can run the tests in `e2e` against an externally hosted web app!_
+
+_We use the [Poltergeist](https://github.com/teampoltergeist/poltergeist) driver for Capybara to run tests headlessly against a hosted app instance._
+
+_You'll need to install [PhantomJS](http://phantomjs.org/) on your host machine. For example, on Mac via homebrew:_
+```
+brew install phantomjs
+```
+_You can then run:_
+
+```
+APP_HOST=<application_host_url> rspec
+```
 
 ## Technologies Used
 
-_Ruby, rspec, Sinatra, Capybara, Heroku, Travis CI_
+_Ruby, rspec, Sinatra, Capybara, Heroku, Travis CI, Poltergeist, PhantomJS_
 
 ### Legal
 
