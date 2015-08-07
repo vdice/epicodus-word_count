@@ -2,6 +2,12 @@ require('rspec')
 require('word_count')
 
 describe('String#word_count') do
+  before do
+    @SPECIAL_CHAR_STRING = '\'\'\'_+?">:}{}"*!#@#%@))))))'
+    @PETER_PIPER_STRING = 'If Peter Piper picked a peck of pickled peppers,' +
+      ' where\'s the peck of pickled peppers Peter Piper picked?'
+  end
+
   it('accepts user input') do
     expect('user input'.word_count('')).to(eq(0))
   end
@@ -22,14 +28,11 @@ describe('String#word_count') do
     expect('11111'.word_count('1')).to(eq(5))
   end
 
-  SPECIAL_CHAR_STRING = '\'\'\'_+?">:}{}"*!#@#%@))))))'
-  it("accepts the special character string #{SPECIAL_CHAR_STRING} and key '@' and returns 2") do
-    expect(SPECIAL_CHAR_STRING.word_count('@')).to(eq(2))
+  it("accepts the special character string #{@SPECIAL_CHAR_STRING} and key '@' and returns 2") do
+    expect(@SPECIAL_CHAR_STRING.word_count('@')).to(eq(2))
   end
 
-  PETER_PIPER_STRING = 'If Peter Piper picked a peck of pickled peppers,' +
-    ' where\'s the peck of pickled peppers Peter Piper picked?'
   it('accepts the \'Peter Piper...\' example string and returns correct count') do
-    expect(PETER_PIPER_STRING.word_count('peck')).to(eq(2))
+    expect(@PETER_PIPER_STRING.word_count('peck')).to(eq(2))
   end
 end
