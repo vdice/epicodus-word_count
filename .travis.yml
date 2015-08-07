@@ -14,7 +14,7 @@ deploy:
   on:
     repo: vdice/epicodus-word_count
     branch: travis
+  run:
+    - "bundle exec rspec"
 after_deploy:
   - "echo 'Deployment to Heroku successful!'"
-  - "echo 'Running tests against deployed app...'"
-  - "bundle exec rspec"
