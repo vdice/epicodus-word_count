@@ -10,6 +10,8 @@ _Users can type in text as well as the word that they would like the number of o
 
 _This app is live! It has been deployed via Heroku and can be seen  [here](https://epicodus-word-count.herokuapp.com/)._
 
+_Now featuring CI! A Travis CI build/test cycle is triggered anytime code is pushed. See `.travis.yml` for the configuration details._
+
 ## Setup
 
 * _Clone this repository_
@@ -20,7 +22,7 @@ _This app is live! It has been deployed via Heroku and can be seen  [here](https
 
 ## Technologies Used
 
-_Ruby, rspec, Sinatra, Capybara, Heroku_
+_Ruby, rspec, Sinatra, Capybara, Heroku, Travis CI_
 
 ### Legal
 
