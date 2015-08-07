@@ -2,6 +2,7 @@ language: ruby
 branches:
   only:
     - travis
+before_script: phantomjs --version
 script: bundle exec rspec
 
 # Heroku deploy
