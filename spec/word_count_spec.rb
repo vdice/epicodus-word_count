@@ -21,4 +21,8 @@ describe('String#word_count') do
   it('accepts the string \'11111\' and key \'1\' and returns 5') do
     expect('11111'.word_count('1')).to(eq(5))
   end
+
+  it('accepts the special character string \'*!#@#%@))))))\' and key \'@\' and returns 2') do
+    expect('*!#@#%@))))))'.word_count('@')).to(eq(2))
+  end
 end
