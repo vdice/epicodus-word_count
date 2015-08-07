@@ -10,9 +10,17 @@ describe('the result path', {:type => :feature}) do
 
   it('processes the input, searching for occurences of key and returns the result') do
     visit('/')
+    expect(page).to have_content("Word Count")
     fill_in('input', :with => PETER_PIPER_STRING)
     fill_in('key', :with => 'peck')
     click_button('Submit')
     expect(page).to have_content('2')
+  end
+
+  it('returns users to index', {:type => :feature}) do
+    visit('/result?input=hello+world&key=world')
+    expect(page).to have_content('1')
+    click_link('Return')
+    expect(page).to have_content("Word Count")
   end
 end
