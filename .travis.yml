@@ -15,7 +15,6 @@ deploy:
   on:
     repo: vdice/epicodus-word_count
     branch: travis
-  run:
-    - "APP_HOST=https://epicodus-word-count.herokuapp.com bundle exec rspec"
 after_deploy:
+  - APP_HOST=https://epicodus-word-count.herokuapp.com bundle exec rspec
   - "echo 'Deployment to Heroku successful!'"
