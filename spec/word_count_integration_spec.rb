@@ -1,10 +1,17 @@
 require('capybara/rspec')
 require('capybara/poltergeist')
+require('phantomjs')
 require('./app')
 
 config = {:type => :feature}
 host = 'localhost'
 if ENV['APP_HOST'] # Run against hosted app via headless poltergeist driver
+  # fix for https://github.com/teampoltergeist/poltergeist/issues/539
+  Phantomjs.path
+  Capybara.register_driver :poltergeist do |app|
+    Capybara::Poltergeist::Driver.new(app, :phantomjs => Phantomjs.path)
+  end
+
   Capybara.run_server = false
   Capybara.current_driver = Capybara.javascript_driver = :poltergeist
   host = Capybara.app_host = ENV['APP_HOST']
